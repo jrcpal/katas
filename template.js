@@ -19,7 +19,3 @@ console.log('Function NAME expects OUTPUT and returns: ', FUNCTIONNAME())
 //
 
 
-
-// Original Test
-// ------------------------------------------
-//
