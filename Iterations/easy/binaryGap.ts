@@ -49,14 +49,13 @@ function solution(N: number): number {
 
 function solution2(N: number): number {
     const binaryStr = N.toString(2)
-    // split the binary string into an array by the 1's in the array
-    // example: 100100010 returns array output: ['','00','','000','','0']
-    let binaryArr = binaryStr.split('1')
-    // pop off the last element in array if binary string did not end with a 1, because that means it didn't have a trailing one and last gap is not a valid gap.
-    if (binaryStr[binaryStr.length - 1] !== '1') binaryArr.pop()
-    let gaps = binaryArr.map(gap => gap.length)
+    // split the binary string into an array by the 1's in the array and map to return length of string
+    // example: 100100010 returns array output: [0,2,0,3,0,1]
+    let gapArr = binaryStr.split('1').map(char => char.length)
+    // pop off the last element in array if array did not end with a 0, because that means it didn't have a trailing one and last gap is not a valid gap.
+    if (gapArr[gapArr.length - 1] !== 0) gapArr.pop()
 
-    return Math.max(...gaps)
+    return Math.max(...gapArr)
 }
 
 // Console
