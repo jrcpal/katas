@@ -16,6 +16,7 @@ function solution(str: string, ending: string) {
 // ------------------------------------------
 
 console.log(solution('abcde', 'de'))
+console.log("solution 2 expects true and returns", solution2('abcde', 'de'))
 
 // Notes
 // ------------------------------------------
@@ -24,7 +25,7 @@ console.log(solution('abcde', 'de'))
 // Alternative solution 
 
 function solution2(str: string, ending: string) {
-    return str.slice(0, -ending.length)
+    return str.slice(-ending.length) === ending
 }
 
 // slice method extracts a section of a string or an array and returns it as a new string or array without modifying the original
