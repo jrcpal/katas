@@ -15,7 +15,7 @@ function disemvowel(str: string) {
 // Console
 // ------------------------------------------
 
-console.log("The function disemvowel expects 'Hw nw brwn cw?' and returns: ", disemvowel("How now brown cow?"))
+console.log("The function disemvowel expects 'Hw nw brwn cw?' and returns: ", disemvowelAttempt("How now brown cow?"))
 
 
 // Notes
