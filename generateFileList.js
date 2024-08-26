@@ -6,6 +6,7 @@ function generateFileList(dir, fileList = []) {
 
     // List of files to ignore
     const ignoreFiles = [
+        path.join(__dirname, 'generateFileList.js'), 
         path.join(__dirname, 'selectRandomFile.js'),
         path.join(__dirname, 'template.js')
     ];
