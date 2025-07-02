@@ -18,7 +18,7 @@
 
 //option 1 using For loop
 
-function solution(N: number): number {
+function binaryGap(N: number): number {
 
     let binaryStr = N.toString(2)
     let binaryArr = binaryStr.split('')
@@ -47,7 +47,7 @@ function solution(N: number): number {
 
 // option 2 
 
-function solution2(N: number): number {
+function binaryGap2(N: number): number {
     const binaryStr = N.toString(2)
     // split the binary string into an array by the 1's in the array and map to return length of string
     // example: 100100010 returns array output: [0,2,0,3,0,1]
@@ -60,11 +60,11 @@ function solution2(N: number): number {
 
 // Console
 // ------------------------------------------
-console.log('Testing solution with input 1041: ', solution(1041)); // Expected output: 5
-console.log('Testing solution with input 32: ', solution(32)); // Expected output: 0
+console.log('Testing solution with input 1041: ', binaryGap(1041)); // Expected output: 5
+console.log('Testing solution with input 32: ', binaryGap(32)); // Expected output: 0
 
-console.log('Testing solution2 with input 1041: ', solution2(1041)); // Expected output: 5
-console.log('Testing solution2 with input 32: ', solution2(32)); // Expected output: 0
+console.log('Testing solution2 with input 1041: ', binaryGap2(1041)); // Expected output: 5
+console.log('Testing solution2 with input 32: ', binaryGap2(32)); // Expected output: 0
 
 
 

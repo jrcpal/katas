@@ -8,24 +8,27 @@
 // Solution
 // ------------------------------------------
 
-function solution(str: string, ending: string) {
-    return str.endsWith(ending)
+function stringEnding(str: string, ending: string) {
+  return str.endsWith(ending);
 }
 
 // Console
 // ------------------------------------------
 
-console.log(solution('abcde', 'de'))
-console.log("solution 2 expects true and returns", solution2('abcde', 'de'))
+console.log(stringEnding("abcde", "de"));
+console.log(
+  "solution 2 expects true and returns",
+  stringEnding2("abcde", "de")
+);
 
 // Notes
 // ------------------------------------------
 
 // .endsWith method came out with ES6 in 2015
-// Alternative solution 
+// Alternative solution
 
-function solution2(str: string, ending: string) {
-    return str.slice(-ending.length) === ending
+function stringEnding2(str: string, ending: string) {
+  return str.slice(-ending.length) === ending;
 }
 
 // slice method extracts a section of a string or an array and returns it as a new string or array without modifying the original

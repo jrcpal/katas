@@ -1,0 +1,18 @@
+Problem Solving
+
+Understand the Problem
+1. Restate the problem in my own words
+2. What are the inputs? 
+3. What are the outputs? 
+4. Can I determine the outputs directly from the given input? 
+5. How should I label the important pieces of data? 
+
+Explore Concrete Examples
+
+
+Break it Down
+
+Solve/Simplify 
+
+
+Look Back and Refactor
