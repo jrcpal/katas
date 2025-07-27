@@ -10,6 +10,7 @@ function generateFileList(dir, fileList = []) {
       path.join(__dirname, "selectRandomFile.js"),
       path.join(__dirname, "template.js"),
       path.join(__dirname, "ProblemSolving.txt"),
+      path.join(__dirname, "preplyWithFrank.js"),
     ];
 
     files.forEach(file => {
