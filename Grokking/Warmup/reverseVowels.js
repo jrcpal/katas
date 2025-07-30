@@ -21,6 +21,29 @@ function reverseVowelsTwoPointers(string) {
   console.log(str.join(""));
 }
 
+function reverseVowelsREGEX(str) {
+  const vowels = str.match(/[aeoiu]/gi) || [];
+  return str.replace(/[aeoiu]/gi, () => vowels.pop());
+}
+
+function reverseVowelsStringMethods(str) {
+  const VOWELS = "aeiouAEIOU";
+  const vows = str.split("").filter((letter) => VOWELS.includes(letter));
+  const cons = str.split("").filter((letter) => !VOWELS.includes(letter));
+
+  const result = [];
+
+  for (let i = 0; i < str.length; i++) {
+    if (VOWELS.includes(str[i])) {
+      result.push(vows.pop());
+    } else {
+      result.push(cons.shift());
+    }
+  }
+
+  return result.join("");
+}
+
 function reverseVowelsStoreInArray(string) {
   const VOWELS = "aeiouAEIOU";
   const str = string.split("");
@@ -32,15 +55,15 @@ function reverseVowelsStoreInArray(string) {
     }
   }
 
-  let vowelsArrIndex = 0
+  let vowelsArrIndex = 0;
   for (let i = 0; i < str.length; i++) {
     if (VOWELS.includes(str[i])) {
-        str[i] = vowelsArr[vowelsArrIndex]
-        vowelsArrIndex++
+      str[i] = vowelsArr[vowelsArrIndex];
+      vowelsArrIndex++;
     }
   }
 
-  console.log(str.join(""))
+  console.log(str.join(""));
 }
 
 reverseVowelsTwoPointers("Hello");
