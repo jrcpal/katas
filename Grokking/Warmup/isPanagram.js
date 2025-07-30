@@ -13,17 +13,44 @@
 // another thought: obviously regex is awesome, but I always forget how to use it 
 // refactored approach: because i'm checking unique letters in alpabet, using set and adding characters to the set is the best approach
 
-function checkIfPangram2(sentence) {
-    const alphabet = "abcdefghijklmnopqrstuvwxyz"
-    const letters = new Set();
+function checkIfPangramSetAndForOfLoop(sentence) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const letters = new Set();
 
-    for (const char of sentence.toLowerCase()) {
-        if (alphabet.includes(char)) {
-            letters.add(char)
-        }
-        if (letters.size === 26) return true 
+  for (const char of sentence.toLowerCase()) {
+    if (alphabet.includes(char)) {
+      letters.add(char);
     }
-    return letters.size === 26;
+    if (letters.size === 26) return true;
+  }
+  return letters.size === 26;
+}
+
+function checkIfPangramSetAndForLoop(sentence) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const lettersSeen = new Set();
+
+  for (let i = 0; i < sentence.length; i++) {
+    let letter = sentence[i].toLowerCase();
+
+    if (alphabet.includes(letter)) {
+      lettersSeen.add(letter);
+    }
+
+    if (lettersSeen.size === 26) return true;
+  }
+  return lettersSeen.size === 26;
+}
+
+function checkIfPangramSetAndStringCheckAndForOfLoop(sentence) {
+  const lowerCaseSentence = sentence.toLowerCase();
+  const lettersSeen = new Set();
+
+  for (const char of lowerCaseSentence) {
+    if (char >= "a" && char <= "z") lettersSeen.add(char);
+    if (lettersSeen.size === 26) return true;
+  }
+  return lettersSeen.size === 26;
 }
 
 function checkIfPangram3(sentence) {
