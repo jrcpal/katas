@@ -8,10 +8,10 @@
 // don't need to match case in these tests
 
 // initial thought: sort both str1 and str2, then loop through str1 (*sort works on arrays not strings)
-// or create hash of str1, and loop through values of str 2 and "check off" values from hash to see if theres a match (*this is more efficient*)
+// or create object of str1, and loop through values of str 2 and "check off" values from object to see if theres a match (*this is more efficient*)
 // can use array method .every() to compare arrays (same complexity as sorting)
 
-function validAnagram2(str1, str2) {
+function validAnagramObjectCompare(str1, str2) {
     if (str1.length !== str1.length) return false;
 
     const sDict = {}
