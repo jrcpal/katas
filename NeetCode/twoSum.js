@@ -13,7 +13,7 @@
  * @param {number} target
  * @return {number[]}
  */
-function twoSum1(nums, target) {
+function twoSumMap(nums, target) {
   // create a new map to store numbers we've seen
   const seen = new Map();
 
@@ -32,7 +32,7 @@ function twoSum1(nums, target) {
   }
 }
 
-function twoSum2(nums, target) {
+function twoSumObject(nums, target) {
   // create a new object to store the values we've seen
   const seen = {};
 
